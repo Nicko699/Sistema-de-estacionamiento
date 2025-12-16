@@ -1,54 +1,98 @@
-# 🚗 Sistema de Estacionamiento
+# 🚗 Sistema de Administración de Estacionamiento
 
-Este proyecto es un **sistema de gestión de estacionamiento**. Permite administrar el ingreso y salida de vehículos, así como el control básico de espacios disponibles.
+> Sistema de gestión para estacionamientos con múltiples tarifas y generación de reportes diarios
 
-Está pensado como una práctica para reforzar lógica de programación, estructuras de control y manejo de datos.
+## 📋 Descripción
 
-## 📌 Descripción
+Aplicación de consola en Java que administra el ingreso de vehículos a un estacionamiento, calcula las tarifas según el tipo de servicio y genera un reporte de ingresos del día.
 
-El sistema simula el funcionamiento básico de un estacionamiento, permitiendo:
+## 🎯 Funcionalidades
 
-* Registrar la entrada de vehículos.
-* Registrar la salida de vehículos.
-* Llevar el control de los espacios ocupados y disponibles.
-* Mostrar información del estado del estacionamiento.
+- 📝 Registro de vehículos por placa
+- 💵 Cálculo automático de tarifas
+- 📊 Reporte de ingresos diarios
+- ✅ Validación de entrada de datos
+- 🔄 Procesamiento de múltiples vehículos hasta escribir "Fin"
+
+## 💰 Tarifas de Estacionamiento
+
+| Tipo de Servicio | Duración | Tarifa Base | Descuento | Total |
+|------------------|----------|-------------|-----------|-------|
+| **Por Hora** | 1-4 horas | $3/hora | - | $3 - $12 |
+| **Media Jornada** | 5 horas | $15 | 5% | $14.25 |
+| **Jornada Completa** | Hasta 10 horas | $30 | 10% | $27 |
+
+## 🚀 Cómo usar
+
+### Requisitos
+- Java JDK 8 o superior
+
+### Ejecución
+
+```bash
+# Compilar
+javac admestacionamiento/AdmEstacionamiento.java
+
+# Ejecutar
+java admestacionamiento.AdmEstacionamiento
+```
+
+### Ejemplo de uso
+
+```
+Ingrese la placa del vehículo
+> ABC123
+
+Ingrese el tipo de estacionamiento:
+1. Por Hora
+2. Media Jornada (5 horas)
+3. Jornada Completa (Hasta 10 horas)
+> 1
+
+Ingrese la cantidad de horas (1-4)
+> 3
+El total a pagar es de 9.0USD
+
+Ingrese la placa del vehículo
+> XYZ789
+
+Ingrese el tipo de estacionamiento:
+1. Por Hora
+2. Media Jornada (5 horas)
+3. Jornada Completa (Hasta 10 horas)
+> 2
+Con un descuento del 5%. El total a pagar es de 14.25USD
+
+Ingrese la placa del vehículo
+> Fin
+
+**************** Total del Dia ********************
+Cantidad total de estacionamientos por hora: 1
+Cantidad total de estacionamientos por Media Jornada: 1
+Cantidad total de estacionamientos por Jornada Completa: 0
+Total de ingresos en el dia: 23.25
+```
+
+## 📊 Reporte del Día
+
+Al finalizar el día (escribiendo "Fin"), el sistema genera un reporte con:
+
+- 🔢 Cantidad de vehículos por cada tipo de servicio
+- 💵 Total de ingresos generados
+- 📈 Resumen completo de operaciones
+
+## 🛠️ Tecnologías
+
+- Java SE
+- Scanner para entrada de datos
+- Manejo de excepciones
+- Estructuras de control (switch, while)
+
+## 👤 Autor
+
+**Nicko699**
+- GitHub: [@Nicko699](https://github.com/Nicko699)
 
 ---
 
-## 🚀 Tecnologías utilizadas
-
-* **Java** – Lenguaje de programación principal
-* **Consola** – Interfaz de interacción con el usuario
-
----
-
-## ▶️ Guía para ejecutar el proyecto
-
-### 📋 Requisitos
-
-* Tener instalado **Java JDK 8 o superior**
-* Un editor o IDE como NetBeans, IntelliJ IDEA, Eclipse o VS Code
-
-### 📂 Pasos de ejecución
-
-1. Clona el repositorio:
-
-   ```bash
-   git clone https://github.com/Nicko699/Sistema-de-estacionamiento.git
-   ```
-2. Abre el proyecto en tu IDE.
-3. Compila el proyecto.
-4. Ejecuta la clase principal (`Main` o la clase que contenga el método `main`).
-
----
-
-## 🧑‍💻 Uso del sistema
-
-1. Ejecuta el programa.
-2. Selecciona una opción del menú (ingresar vehículo, retirar vehículo, ver estado, etc.).
-3. Ingresa los datos solicitados.
-4. El sistema mostrará el resultado de la operación.
-
-
-
-✨ Proyecto realizado con fines de aprendizaje y práctica en programación.
+💡 **Proyecto educativo para practicar estructuras de control y acumuladores en Java**
