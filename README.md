@@ -93,6 +93,3 @@ Al finalizar el día (escribiendo "Fin"), el sistema genera un reporte con:
 **Nicko699**
 - GitHub: [@Nicko699](https://github.com/Nicko699)
 
----
-
-💡 **Proyecto educativo para practicar estructuras de control y acumuladores en Java**
